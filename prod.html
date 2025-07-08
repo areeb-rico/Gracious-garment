@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon"  href="images/4.png" style="width: 50px; height: 50px;align-items: center;">
+  <title>product-card | Gracious Garments</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="x-icon" href="Images/1.png">
+  <title>All Collections</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/Prod.css">
+<link rel="stylesheet" href="css/header.css">
+</head>
+<style>
+  
+</style>
+  
+
+<body>
+  <header>  
+      
+      
+    <nav class="navmy d-none d-lg-block">
+    
+        <div class="d-flex justify-content-center log ">
+            <div class="logo">
+                <i class="fa fa-navicon d-none"></i>
+              
+                <a href="index.html"><img src="images/1.png" alt="" height="100px" width="auto" class=" log-img1"></a>
+                <a href="index.html"><img src="images/2.png" alt="" height="100px" width="auto" class=" log-img2"></a>
+            </div>
+        </div>
+        <div class=" d-flex justify-content-around">
+            <div>
+              <span data-bs-toggle="modal" data-bs-target="#searchModal">
+                <i class="fa fa-search fam" style="font-size: 25px; cursor: pointer;"></i>
+            </span>
+                </span>
+            </div>
+            <div class="d-flex">
+              
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CORE COLLECTION
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item"  href="prod.html">· All collections
+                        </a>
+                        <a class="dropdown-item" onclick="addto('Hoodies')"> Hoodies</a>
+                        <a class="dropdown-item"onclick="addto('Sweatshirts')">Sweat-shirts</a>
+                        <a class="dropdown-item" onclick="addto('Jackets')">Jackets</a>
+                        <div class="dropdown-item"onclick="addto('Pants')">bottoms</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        SHOP
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <a class="dropdown-item" onclick="addto('Mens')">Men's</a>
+                        <a class="dropdown-item"  onclick="addto('Womens')">Women's</a>        
+                        <a class="dropdown-item" href="prod.html">All</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        ABOUT GRACIOUS
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+                        <a class="dropdown-item" href="about.html"  target=”_blank”> Our story</a>
+                        <a class="dropdown-item" href="contact.html">Contact-us</a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex gap-4">
+              <a href="Signin.html"><span><i class="fa fa-user-o fam" style="font-size:25px"></i></span></a>
+                
+                <span><i class="fa fa-shopping-bag fam" style="font-size:25px" type="button" class="btn" id="openModal"></i></span>
+            </div>
+        </div>
+      
+                
+    </nav>
+    <nav class="navmy d-lg-none d-block ">
+                <div class="logo d-flex justify-content-around">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="combinedDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-navicon fam" style="font-size: 30px;"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="combinedDropdown">
+                            <a class="dropdown-header" href="prod.html">CORE COLLECTION</a>
+                            <a class="dropdown-item" href="prod.html">· All collections</a>
+                            <a class="dropdown-item"onclick="addto('Hoodies')">Hoodies</a>
+                            <a class="dropdown-item" onclick="addto('Sweatshirts')">Sweat-shirts</a>
+                            <a class="dropdown-item"onclick="addto('Jackets')">Jackets</a>
+                            <a class="dropdown-item" href="#">Bottoms</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">SHOP</h6>
+                            <a class="dropdown-item" onclick="addto('Mens')">Men's</a>
+                            <a class="dropdown-item"onclick="addto('Womens')">Women's</a>
+                            <a class="dropdown-item"  href="prod.html">All</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">ABOUT GRACIOUS</h6>
+                            <a class="dropdown-item" href="about.html">Our story</a>
+                            <a class="dropdown-item" href="contact.html">Contact us</a>
+                            
+                        </div>
+                    </div>
+              
+                <img src="images/3.png" alt="" height="80px" width="auto" class="log-img2">
+                <img src="images/4.png" alt="" height="80px" width="auto" class="log-img1">
+                    <div class="d-flex gap-4">
+                        <a href="Signin.html"><span><i class="fa fa-user-o fam" style="font-size:20px"></i></span></a>
+                        <span><i class="fa fa-shopping-bag fam" style="font-size:25px" type="button" class="btn" id="openModal"></i></span>
+                    </div>
+            </div>
+        </div>
+        <hr size="6" class="hrv">
+    </nav>
+    
+    
+    </div>
+    <section class="modalsearch">
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" data-bs-backdrop="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center align-items-center">
+                        <input type="text" class="form-control" placeholder="Type your search here..." autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</header>
+  <div class="container-fluid ">
+    <div class="headline">
+    <h1 class="text-center">Products</h1>
+  </div>
+    <hr><br><br>
+    <div class="row">
+      <!-- Filter Section -->
+      <div class="col-lg-3 col-12 h-100">
+        <div class="filter-section">
+          <h4>Filter by Category</h4>
+          <hr>
+          <button class="filter-btn" onclick="filterProducts('Jackets')">Jackets</button>
+          <button class="filter-btn" onclick="filterProducts('Sweatshirts')">Sweatshirts</button>
+          <button class="filter-btn" onclick="filterProducts('Hoodies')">Hoodies</button>
+          <button class="filter-btn" onclick="filterProducts('Pants')">Pants</button>
+          <hr>
+
+          <button class="filter-btn" onclick="filterProducts('Outfitters')">Outfitters</button>
+          <button class="filter-btn" onclick="filterProducts('Louis Vuitton')">Louis Vuitton</button>
+          <button class="filter-btn" onclick="filterProducts('Versace')">Versace</button>
+          <button class="filter-btn" onclick="filterProducts('Hermes')">Hermes</button>
+          <button class="filter-btn" onclick="filterProducts('Gracious Specials')">Gracious Specials</button>
+          <hr>
+          <button class="filter-btn" onclick="filterProducts('Mens')">Men's</button>
+          <button class="filter-btn" onclick="filterProducts('Womens')">Women's</button>
+          <button class="filter-btn" onclick="resetFilter()">Show All</button>
+        </div>
+      </div>
+
+      <!-- Products Section Starts-->
+      <div class="col-lg-9 col-12">
+        <div class="row" id="product-container">
+          <!-- Product Cards -->
+          
+          
+                 <!-- Outfitters -->
+               
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Jackets, Outfitters, Womens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Long Wool Coat | Outfitters', 'Elevate your outerwear with our luxurious Oversized Wool Coat. Made from premium wool, the peak lapel collar adds a touch of sophistication while the 2 button closure keeps you warm and stylish. Stay cozy with the 2 welt pockets and make a statement with this oversized silhouette.', 'images/product/Long Wool Coat/1.jpg', 'images/product/Long Wool Coat/2.jpg', 'images/product/Long Wool Coat/3.jpg', 'images/product/Long Wool Coat/4.jpg', 'Images/Long Wool Coat/F0145201111_7.jpg', 'Price: PKR 16,990', 'Coat | Womens', 'Black, Mid Olive, Yellow Biege', 'Wool blend', 'XS, Small, Medium, Large, XL')">
+              <img class="card-img-top " src="images/product/Long Wool Coat/1.jpg" />
+              <div class="card-body">
+                <h4 class="card-title">Long Wool Coat</h4>
+                <p class="card-text">PKR 16,990.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Sweatshirts, Outfitters, Womens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Mock Neck Sweatshirt | Outfitters', 'Stay warm and stylish with our Mock Neck Sweatshirt. Its mock neck design adds a unique touch to this basic solid sweatshirt, offering both comfort and a relaxed fit. Perfect for any casual occasion!', 'images/product/Mock Neck Sweatshirt/1.jpg', 'images/product/Mock Neck Sweatshirt/2.jpg', 'images/product/Mock Neck Sweatshirt/3.jpg', 'images/product/Mock Neck Sweatshirt/4.jpg', 'images/product/Mock Neck Sweatshirt/5.jpg', 'Price: PKR 2,790.00', 'Sweatshirt | Womens', 'Dark Blue', '80% Cotton, 20% polyester', 'Small, Medium, Large')">
+              <img class="card-img-top" src="images/product/Mock Neck Sweatshirt/1.jpg" />
+              <div class="card-body">
+                <h4 class="card-title">Mock Neck Sweatshirt</h4>
+                <p class="card-text">PKR 2,790.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Pants, Outfitters, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Straight Fit trousers | Outfitters', 'Ready for any occasion, these Straight Fit Trousers combine comfort and style with their cotton polyester blend. No need to sacrifice one for the other anymore!', 'images/product/Straight fit trousers/1.png', 'images/product/Straight fit trousers/2.jpg', 'images/product/Straight fit trousers/3.jpg', 'images/product/Straight fit trousers/4.jpg', 'Images/Straight fit trousers/F0497108804_2_co_03py2.jpg', 'Price: PKR 5,490', 'Trousers | Mens', 'Chocolate Brown, Black', '80% Cotton 20% Polyester', 'Small, Medium, Large, XL')">
+              <img class="card-img-top" src="images/product/Straight fit trousers/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Straight Fit trousers</h4>
+                <p class="card-text"> PKR 5,490.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Sweatshirts, Outfitters, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Sweatshirt For Men | Outfitters', 'Stay cozy and stylish in our Basic Sweatshirt. Made with a blend of 80% Cotton and 20% Polyester, this relaxed fit sweatshirt offers both comfort and durability. A must-have for any wardrobe, perfect for everyday wear.', 'images/product/Sweatshirt for men/1.jpg', 'images/product/Sweatshirt for men/2.jpg','images/product/Sweatshirt for men/3.jpg','images/product/Sweatshirt for men/4.jpg','images/product/Sweatshirt for men/5.jpg', 'Price: PKR 2,190', 'Sweatshirt | Mens', 'Dark Blue, Dark Grey', '80%Cotton 20%Polyester', 'Small, Medium, Large, XL')">
+              <img class="card-img-top" src="images/product/Sweatshirt for men/1.jpg" />
+              <div class="card-body">
+                <h4 class="card-title">Sweatshirt For Men</h4>
+                <p class="card-text">PKR 2,190.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Pants, Outfitters, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Mens Cotton Blend Pants | Outfitters', 'Elevate your everyday wardrobe with these Mens Cotton Blend Pants, designed for both comfort and style. Crafted from a soft yet durable cotton blend, these pants offer a breathable feel that keeps you cool and relaxed throughout the day. The versatile fabric provides a perfect balance of stretch and structure, ensuring a flattering fit that moves with you..', 'images/product/Basic Cotton Blend Pants – Outfitters/1.jpg', 'images/product/Basic Cotton Blend Pants – Outfitters/2.jpg','','','', 'Price: PKR 2,490', 'Pants | Mens', 'Dark Blue, Black, Sand', '98%Cotton 2%Spandex', '30, 32, 34, 36, 38')">
+              <img class="card-img-top"
+                src="images/product/Basic Cotton Blend Pants – Outfitters/1.jpg" />
+              <div class="card-body">
+                <h4 class="card-title">Men's Cotton Blend Pants</h4>
+                <p class="card-text">PKR 2,490.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Pants, Outfitters, Womens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Womens High Rise Skinny Pants | Outfitters', 'Perfectly combining comfort and style, our Womens High Rise Skinny Pants are a must-have wardrobe staple. Designed with a flattering high-rise waist, these pants offer a sleek, figure-contouring fit that elongates the legs and enhances your natural shape. Made from a stretchy fabric blend, they provide ultimate flexibility and comfort while maintaining a smooth, polished look throughout the day..', 'images/product/High Rise Skinny Pants/1.webp', 'images/product/High Rise Skinny Pants/2.webp','images/product/High Rise Skinny Pants/3.jpg','images/product/High Rise Skinny Pants/4.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 1,090', 'Pants | Womens', 'White, Black, Magenta, Cloudy Violet', '98%Cotton 2%Spandex', '24, 26, 28, 30')">
+
+              <img class="card-img-top" src="images/product/High Rise Skinny Pants/1.webp" />
+              <div class="card-body">
+                <h4 class="card-title">Women's High Rise Skinny Pants</h4>
+                <p class="card-text">PKR 1,090.00</p>
+              </div>
+            </div>
+          </div>
+
+
+                 <!-- Outfitters end -->
+
+
+                 <!-- Louis Vuitton -->
+
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2 " data-category="Hoodies, Louis Vuitton, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Reversible Hooded Shearling Blouson | Louis Vuitton', 'Embrace versatility and warmth with our Reversible Hooded Shearling Blouson. This stylish and functional piece offers the best of both worlds, combining cozy shearling on one side with a sleek, polished exterior on the other. The reversible design lets you switch up your look, making it a must-have outerwear option for the fashion-forward individual.', 'images/product/Reversible Hooded Shearling Blouson/1.png', '  images/product/Reversible Hooded Shearling Blouson/2.png','Images/High Rise Skinny Pants/F00982084045.jpg','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 1,090', 'Jackets | Mens', 'Brown', '100% Shearling', '44, 48, 50, 52, 54, 56, 58, 60')">
+
+              <img class="card-img-top "
+                src="images/product/Reversible Hooded Shearling Blouson/2.png" />
+              <div class="card-body">
+                <h4 class="card-title">Reversible Hooded Shearling Blouson</h4>
+                <p class="card-text">PKR 1,090.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Hoodies, Louis Vuitton, Womens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Travel Stamp Cropped Hoodie | Louis Vuitton', 'This hoodie is a modern loungewear staple in a slouchy, cropped shape cut from soft cotton jersey for comfortable everyday wear. The body is detailed with colorful clusters of Louis Vuitton travel stamps from the Flight Mode capsule in celebration of the House’s heritage. Complete with contrasting drawstrings tripped with golden hardware.', 'images/product/Travel Stamp Cropped Hoodie/1.png', 'images/product/Travel Stamp Cropped Hoodie/2.png','Images/High Rise Skinny Pants/F00982084045.jpg','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 6,000', 'Jackets | Womens', 'Pearl Grey', '100% Cotton', 'XS, Small, Medium, Large, XL, 2XL')">
+
+              <img class="card-img-top "
+                src="images/product/Travel Stamp Cropped Hoodie/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Travel Stamp Cropped Hoodie</h4>
+                <p class="card-text">PKR 6,000.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Sweatshirts, Louis Vuitton, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Textured Cotton Crewneck Sweatshirt| Louis Vuitton', 'The Textured Cotton Crewneck is a versatile and comfortable wardrobe staple that combines style and ease. Crafted from soft, breathable cotton, this crewneck sweater features a unique textured fabric that adds depth and visual interest to a classic design. Whether worn on its own or layered under jackets, it offers both comfort and a modern look.', 'images/product/Textured Cotton Crewneck/1.png', 'images/product/Textured Cotton Crewneck/2.png','Images/High Rise Skinny Pants/F00982084045.jpg','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 8,500', 'Sweatshirt | Mens', 'Indigo', '100% Cotton', 'XS, Small, Medium, Large, XL, 2XL, 3XL')">
+
+              <img class="card-img-top "
+                src="images/product/Textured Cotton Crewneck/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Textured Cotton Crewneck Sweatshirt</h4>
+                <p class="card-text">PKR 8,500.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Jackets, Louis Vuitton, Womens, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Denim Trucker Jacket | Louis Vuitton', 'A Denim Trucker Jacket is a classic piece of outerwear that has become a staple in modern wardrobes due to its timeless style and versatility. Typically made from durable cotton denim, the trucker jacket originated as workwear in the 1960s but has since evolved into a popular fashion item. It is known for its structured design, with features such as a button-down front, a pointed collar, and often two chest pockets with flap closures.', 'images/product/Denim Trucker Jacket/1.png', 'images/product/Denim Trucker Jacket/2.png','Images/High Rise Skinny Pants/F00982084045.jpg','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 4,500', 'Jackets | Unisex', 'Indigo', '100% Cotton', '44, 48, 50, 52, 54, 56, 58, 60')">
+
+              <img class="card-img-top "
+                src="images/product/Denim Trucker Jacket/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Denim Trucker Jacket</h4>
+                <p class="card-text">PKR 4,500.00</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Pants, Louis Vuitton, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('Sheer Pleated Pants | Louis Vuitton', 'These pants have an elegantly airy look in the runway’s oversized rounded silhouette, crafted from lightweight sheer jersey for a daring play of transparency. Pleating emphasizes the fluidity of the fabric and the volume of the cut, while a structured waistband and exposed metallic zipper fastening complete the look with a contemporary touch.', 'images/product/Sheer Pleated Pants/1.png', 'images/product/Sheer Pleated Pants/2.png','Images/High Rise Skinny Pants/F00982084045.jpg','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 8,500', 'Pants | Mens', 'Black', '97% Viscose, 2% Cotton, 1% Polyamide', '32, 34, 36, 38, 40, 42, 44, 46')">
+
+              <img class="card-img-top "
+                src="images/product/Sheer Pleated Pants/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Sheer Pleated Pants</h4>
+                <p class="card-text">PKR 8,500.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Hoodies, Louis Vuitton, Mens">
+            <div class="card border-0 h-50"
+              onclick="addtolocal('LV HOODED | Louis Vuitton', 'Crafted from a wonderfully soft blend of cotton, silk and cashmere, this casual piece revisits the iconic hooded sweater - with an embroidered LV Circle motif on the chest adding a subtle touch of branding.', 'images/product/LV HOODED/1.png', 'images/product/LV HOODED/2.png','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 8,500', ' Hoodies | Mens', 'Marine Nuit, Gris Clair, Marine', '100% Cotton', 'XS, Large, Medium, XL, 2XL, 3XL, 4XL')">
+
+              <img class="card-img-top "
+                src="images/product/LV HOODED/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">LV Hooded</h4>
+                <p class="card-text">PKR 8,500.00</p>
+              </div>
+            </div>
+          </div>
+
+                 <!-- Louis Vuitton  ends-->
+
+
+                 <!-- Versace -->
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Jackets, Versace, Mens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal('Mens Bomber Jacket | Versace', 'A lightly padded nylon bomber jacket detailed with a Versace Milano Stamp embroidery on one sleeve, featuring a La Coupe des Dieux printed panel at the back.', 'images/product/La Coupe des Dieux Bomber Jacket/1.png', 'images/product/La Coupe des Dieux Bomber Jacket/2.png','Images/High Rise Skinny Pants/F00982084045.jpg','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 1,212', ' Jacket | Mens', 'Black', '100% Nylon', '44, 46, 48, 50, 52, 54, 56')">
+
+              <img class="card-img-top " src="images/product/La Coupe des Dieux Bomber Jacket/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Men's Bomber Jacket</h4>
+                <p class="card-text">PKR 1,212.00</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Hoodies, Versace, Womens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal('Logo Crop Hoodie | Versace', 'Elevate your streetwear style with the Logo Crop Hoodie, a bold and trendy piece perfect for casual days or layering up. Crafted from a soft, comfortable fabric blend, this hoodie offers a cozy fit with a cropped silhouette that pairs effortlessly with high-waisted jeans, leggings, or skirts.', 'images/product/Logo Crop Hoodie/1.png', 'images/product/Logo Crop Hoodie/2.png','Images/High Rise Skinny Pants/F00982084045.jpg','Images/High Rise Skinny Pants/F0098208407.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 8,500', ' Hoodies | Womens', 'Black+Gold', '95% Cotton, 5% Elastane', 'XXS, XS, Small, Medium, Large, XL')">
+
+              <img class="card-img-top "
+                src="images/product/Logo Crop Hoodie/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Logo Crop Hoodie</h4>
+                <p class="card-text">PKR 8,500.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Sweatshirts, Versace, Mens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal('Versace Pop Pin Sweatshirt | Versace', 'Designed with a classic crew neckline and ribbed cuffs, this sweatshirt exudes both style and practicality, making it an essential piece for any fashion-forward wardrobe. Whether you are lounging at home, out for a casual meet-up, or layering for a bold look, the Versace Pop Pin Sweatshirt ensures you stay stylish without sacrificing comfort.', 'images/product/Versace Pop Pin Sweatshirt/1.png', 'images/product/Versace Pop Pin Sweatshirt/2.png','images/product/Versace Pop Pin Sweatshirt/3.png','Images/Versace Pop Pin Sweatshirt/4.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 1,075', ' Sweatshirt | Mens', 'Black+Print', '100% Cotton', 'XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL')">
+
+              <img class="card-img-top " src="images/product/Versace Pop Pin Sweatshirt/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Versace Pop Pin Sweatshirt</h4>
+                <p class="card-text">PKR 1,075.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Sweatshirts, Versace, Womens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal('Embellished Medusa Sweatshirt | Versace', 'This regular-fit crewneck sweatshirt is crafted from cotton jersey and features a Medusa thread-embroidery with a Greca border, embellished with micro crystals and lurex.', 'images/product/Embellished Medusa Sweatshirt/1.png', 'images/product/Embellished Medusa Sweatshirt/2.pngg','images/product/Embellished Medusa Sweatshirt/3.jpg','images/product/Embellished Medusa Sweatshirt/4.jpg','images/product/Embellished Medusa Sweatshirt/5.jpg', 'Price: PKR 1,650', ' Sweatshirt | Womens', 'Black', '100% Cotton', '36, 38, 40, 42, 44, 46, 48, 50')">
+
+              <img class="card-img-top " src="images/product/Embellished Medusa Sweatshirt/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Embellished Medusa Sweatshirt</h4>
+                <p class="card-text">PKR 1,650.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Pants, Versace, Mens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal('>Over Dyed Canvas Carpenter Pants | Versace', 'A modern take on a classic design. Made from durable, high-quality canvas fabric, these pants offer a rugged yet comfortable fit, perfect for those who need both style and functionality. The overdyed finish gives the pants a unique, worn-in look, adding character while maintaining their strength and durability.', 'images/product/Overdyed Canvas Carpenter Pants/1.png','images/product/Overdyed Canvas Carpenter Pants/2.png','Images/Versace Pop Pin Sweatshirt/4.jpg','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Price: PKR 1,350', ' Pants | Mens', 'Burgundy', '100% Cotton', '44, 46, 48, 50, 52, 54, 56, 58, 60, 62')">
+
+              <img class="card-img-top " src="images/product/Overdyed Canvas Carpenter Pants/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">Carpenter Pants </h4>
+                <p class="card-text">PKR 1,350.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Pants, Versace, Mens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal('>Basic Cotton Blend Pants | Versace', 'A modern take on a classic design. Made from durable, high-quality canvas fabric, these pants offer a rugged yet comfortable fit, perfect for those who need both style and functionality. The overdyed finish gives the pants a unique, worn-in look, adding character while maintaining their strength and durability.', 'images/product/Basic Cotton Blend Pants/1.jpg','images/product/Basic Cotton Blend Pants/2.jpg','images/product/Basic Cotton Blend Pants – Outfitters/1.jpg', 'images/product/Basic Cotton Blend Pants – Outfitters/2.jpg','Price: PKR 1,500', ' Pants | Mens', 'Burgundy', '100% Cotton', '44, 46, 48, 50, 52, 54, 56, 58, 60, 62')">
+
+              <img class="card-img-top " src="images/product/Basic Cotton Blend Pants/1.jpg" />
+              <div class="card-body">
+                <h4 class="card-title">Basic Cotton Blend Pants </h4>
+                <p class="card-text">PKR 1,350.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Hoodies, Versace, Mens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal('LA Medusa Hoodie | Versace', 'Embrace luxury and style with the La Medusa Hoodie, a statement piece from Versace that fuses comfort with high-fashion flair. Featuring the iconic La Medusa head emblem, this hoodie is a true symbol of the brands rich heritage and timeless appeal. The Medusa logo, famously associated with Versace, is intricately embroidered or printed on the chest, adding a bold touch of opulence to this classic hoodie design.', 'images/product/La Medusa Hoodie/1.png','images/product/La Medusa Hoodie/2.png','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Images/High Rise Skinny Pants/F0098208001_2.jpg', ' Price: PKR 1,195', ' Hoodies | Mens', 'Black, Blue, White, Green', '100% Cotton', 'XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL')">
+
+              <img class="card-img-top " src="images/product/La Medusa Hoodie/1.png" />
+              <div class="card-body">
+                <h4 class="card-title">LA Medusa Hoodie</h4>
+                <p class="card-text">PKR 1,195.00</p>
+              </div>
+            </div>
+          </div>
+        <!-- Versace end -->
+
+        <!-- hermes -->
+        <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Sweatshirts, Hermes, Mens">
+          <div class="card border-0 h-100"
+            onclick="addtolocal('Detail H crewneck sweater| Hermes', 'The Detail H Crewneck Sweater by Hermès offers a refined yet casual look, crafted from soft, luxurious materials such as cashmere or wool. It features a classic crewneck design with a subtle H logo detail, representing the brands iconic style. This sweater balances simplicity with elegance, making it a versatile addition to any wardrobe. Its fine craftsmanship and attention to detail ensure both comfort and sophistication, embodying Hermès dedication to quality and timeless fashion.', 'images/product/Detail H crewneck sweater/1.png','images/product/Detail H crewneck sweater/2.png','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Images/High Rise Skinny Pants/F0098208001_2.jpg', ' Price: PKR 5,195', ' Sweatshirts | Mens', 'Black, Blue, White, Green', '100% Cotton', 'XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL')">
+
+            <img class="card-img-top " src="images/product/Detail H crewneck sweater/1.png" />
+            <div class="card-body">
+              <h4 class="card-title">Detail H crewneck sweater</h4>
+              <p class="card-text">PKR 5,195</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Jackets, Hermes, Mens">
+          <div class="card border-0 h-100"
+            onclick="addtolocal('Zipped varsity cardigan with leather detail | Hermes', 'The Zipped Varsity Cardigan with Leather Detail from Hermès combines sporty elegance with luxurious craftsmanship. Made from high-quality wool, it features a zip closure, a varsity-style design, and leather details along the shoulders and collar, adding a refined touch to the casual look. This cardigan blends comfort and style, perfect for elevating an everyday outfit with a sophisticated edge.', 'images/product/Zipped varsity cardigan with leather detail/1.png','images/product/Zipped varsity cardigan with leather detail/2.png','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Images/High Rise Skinny Pants/F0098208001_2.jpg', ' Price: PKR 4,195', ' Jackets | Mens', 'Black, Blue, White, Green', '100% Cotton', 'XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL')">
+
+            <img class="card-img-top " src="images/product/Zipped varsity cardigan with leather detail/1.png" />
+            <div class="card-body">
+              <h4 class="card-title">Zipped varsity cardigan with leather detail</h4>
+              <p class="card-text">PKR 4,195</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Jackets, Hermes, Womens">
+          <div class="card border-0 h-100"
+            onclick="addtolocal('Effet Kaleidoscope reversible short puffer coat| Hermes', 'The Effet Kaleidoscope Reversible Short Puffer Coat from Hermès combines functionality with distinctive style. This versatile jacket features a reversible design, offering two different looks in one piece. It is crafted from high-quality materials, providing warmth and comfort with a lightweight feel. The coat showcases an eye-catching Kaleidoscope pattern on one side, while the other side offers a more classic, solid color for versatile styling. The sleek, modern silhouette and attention to detail make it both practical and fashion-forward, reflecting Hermès commitment to luxury and craftsmanship.', 'images/product/Effet Kaleidoscope reversible short puffer coat/1.png','images/product/Effet Kaleidoscope reversible short puffer coat/2.png','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Images/High Rise Skinny Pants/F0098208001_2.jpg', ' Price: PKR 4,195', ' Jackets | Mens', 'Black, Blue, White, Green', '100% Cotton', 'XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL')">
+
+            <img class="card-img-top " src="images/product/Effet Kaleidoscope reversible short puffer coat/1.png" />
+            <div class="card-body">
+              <h4 class="card-title">"Effet Kaleidoscope" reversible short puffer coat</h4>
+              <p class="card-text">PKR 4,995</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6 product-card mt-2" data-category="Pants, Hermes, Womens">
+          <div class="card border-0 h-100"
+            onclick="addtolocal(' H jogging pants| Hermes', 'The H Jogging Pants by Hermès offer a perfect blend of luxury and comfort. Made from premium fabrics like cotton or a soft blend, these pants feature a relaxed fit with an elastic waistband and cuffs for a sporty, yet refined look. The understated H logo adds a subtle touch of elegance. Ideal for casual wear, they embody Hermès’ dedication to quality craftsmanship, providing both style and ease for everyday activities. Whether paired with a casual top or elevated outerwear, these joggers offer versatility and sophistication in every move.', 'images/product/H jogging pants/1.png','images/product/H jogging pants/2.png','Images/High Rise Skinny Pants/F0098208001_2.jpg', 'Images/High Rise Skinny Pants/F0098208001_2.jpg', ' Price: PKR 4,195', ' pants | Womens', 'Black, Blue, White, Green', '100% Cotton', 'XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL')">
+
+            <img class="card-img-top " src="images/product/H jogging pants/1.png" />
+            <div class="card-body">
+              <h4 class="card-title">H jogging pants</h4>
+              <p class="card-text">PKR 4,995</p>
+            </div>
+          </div>
+        </div>
+          <!-- hermes end -->
+          <div class="col-lg-3 col-md-4 col-6 product-card mt-2"
+            data-category="Sweatshirts, Gracious Specials, Mens, Womens">
+            <div class="card border-0 h-100"
+              onclick="addtolocal(' Sublimated Crewneck Sweatshirt', ' Elevate your casual wardrobe with our Fully Sublimated Crew Neck Sweatshirts. Designed for both style and comfort, these sweatshirts feature advanced sublimation printing, ensuring vibrant, full-color designs that remain vivid and resistant to fading wash after wash. The high-quality fabric offers a soft, cozy feel, perfect for staying warm during cooler weather. ', 'images/product/CREW NECK SWEATSHIRTS/1.jpeg','images/product/CREW NECK SWEATSHIRTS/2.webp','images/product/CREW NECK SWEATSHIRTS/3.jpeg','', ' Price: PKR 4,850', ' Sweatshirt | Mens', 'Custom', '8.85 Oz 100% Polyester', 'XS, S, M, L, XL, 2XL, 3XL, 4XL','Mens')">
+
+              <img class="card-img-top " src="images/product/CREW NECK SWEATSHIRTS/1.jpeg" />
+              <div class="card-body">
+                <h4 class="card-title">Sublimated Crewneck Sweatshirt</h4>
+                <p class="card-text">PKR 4,850.00</p>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat Product Cards for other products -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class=" foot text-white py-4">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-4 col-sm-3">
+                <h5>About Us</h5>
+                <p>If you want to look as smexy as we do! follow  <span><a href="https://www.instagram.com/graciousgarments8/" class="text-decoration-none">us</a ></span> and grab it before it sells out! You'll be looking all aesthetic, just like everyone else who's got it together. Seriously, don't wait—get in on the trend now, and you'll be turning heads before you know it! 😏</p>
+            </div>
+            <div class="col-lg-4 col-sm-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="prod.html" class="text-white text-decoration-none">core collection</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-3">
+                <h5>Contact Us</h5>
+                <p>Email: Arib.rico2008@gmail.com</p>
+                <p>Phone: +319 2999 820</p>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-6 map d-none d-sm-block">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20462.972353259007!2d67.08839694366466!3d24.95329752596035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3390008cfd9ab%3A0x50570e200b0de0fe!2sAptech%20scheme%2033!5e0!3m2!1sen!2s!4v1734410791904!5m2!1sen!2s"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="newsletter">
+                            <h2>Subscribe to Our Newsletter</h2>
+                            <p>Stay updated with our latest news and offers. Enter your email below:</p>
+                            <form id="newsletterForm">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+                                    <button class="btn btn-primary  " type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                            <div id="successMessage" class="alert  d-none" role="alert">
+                                Thank you for subscribing!
+                            </div>
+                        </div>
+                        </div>
+            </div>
+        
+        <hr class="bg-white">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript for Filtering -->
+ <script src="prod.js"></script>
+ <script>
+  function addto(cat) {
+      
+      window.location.href = "prod.html";
+      localStorage.setItem("category", cat);
+     }
+
+</script>
+</body>
+
+</html>

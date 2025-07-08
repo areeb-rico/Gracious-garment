@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    .container {
+        margin: 20px auto;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+    }
+    
+    .text{
+        flex: 1;
+        padding: 0 50px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    @media (max-width: 750px) {
+        .mimg{
+
+        }
+    }
+    .mimg img {
+        max-height:100%;
+         max-width:100%;
+       
+    }
+    .card {
+            width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            background-color:transparent ;
+            border: none;
+        }
+        .card:hover {
+            transform: scale(1.05); 
+            /* Slight zoom on hover */
+        }
+       .card img:hover{
+            
+      transform: scale(1);
+      filter: grayscale(20%) brightness(0.8);
+      mix-blend-mode: multiply;
+    
+        }
+        .card img {
+           height: 400px;
+           width: 100%;
+            object-fit: cover; 
+            background-position: center;/* Ensures image fits the card nicely */
+        }
+        .card-body {
+          justify-content: center;
+         
+          text-align: center;
+          
+        }
+
+        .card-body h3 {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .card-body p {
+            font-size: 16px;
+            color: #555;
+            text-transform: lowercase;
+        }
+        .row{
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .card-body button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .card-body button:hover {
+            background-color: #0056b3;
+        }
+        .section {
+            display: none; /* Hide all sections by default */
+        }
+        #section1 {
+            display: block;
+        }
+        .btn{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.btn :hover{
+color: gray;
+border-color: rgb(255, 255, 255); 
+color: rgb(0, 0, 0); 
+}
+button {
+background-color: rgb(255, 255, 255); 
+color: rgb(0, 0, 0);
+padding: 10px 20px;
+border: 2px solid black;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* Jab button par click karein */
+button:active {
+background-color: rgb(0, 0, 0); 
+}
+button:hover {
+border-color: rgb(255, 255, 255); 
+color: rgb(0, 0, 0); 
+}   
+</style>
+
+<body>
+    <header>
+    
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active carousel-item1" data-bs-interval="10000">
+                <p class="d-flex justify-content-center d-block w-100">FREE SHIPING ALL OVER THE WORLD 
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <p class="d-flex justify-content-center d-block w-100">SHOP OUR CORE COLLECTION!
+              </div>
+              <div class="carousel-item">
+                <p class="d-flex justify-content-center d-block w-100">FIND YOU LOVEST BRAND HERE
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <nav class="navmy d-none d-lg-block">
+        
+            <div class="d-flex justify-content-center log ">
+                <div class="logo">
+                    <i class="fa fa-navicon d-none"></i>
+                   
+                    <a href="index.html"><img src="images/1.png" alt="" height="100px" width="auto" class=" log-img1"></a>
+                    <a href="index.html"><img src="images/2.png" alt="" height="100px" width="auto" class=" log-img2"></a>
+                </div>
+            </div>
+            <div class=" d-flex justify-content-around">
+                <div>
+                    <span data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fa fa-search fam" style="font-size: 25px; cursor: pointer;"></i>
+                    </span>
+                    </span>
+                </div>
+                <div class="d-flex">
+                   
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            CORE COLLECTION
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">· All collections
+                            </a>
+                            <a class="dropdown-item" onclick="addto('Hoodies')"> Hoodies</a>
+                            <a class="dropdown-item"onclick="addto('Sweatshirts')">Sweat-shirts</a>
+                            <a class="dropdown-item" onclick="addto('Jackets')">Jackets</a>
+                            <div class="dropdown-item"onclick="addto('Bottoms')">bottoms</div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            SHOP
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item"  onclick="addto('Mens')">Men's</a>
+                            <a class="dropdown-item" onclick="addto('Womens')">Women's</a>        
+                            <a class="dropdown-item" href="prod.html">All</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn  dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            ABOUT GRACIOUS
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="triggerId">
+                            <a class="dropdown-item" href="about.html"> Our story</a>
+                            <a class="dropdown-item" href="contact.html">Contact-us</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-4">
+                    <a href="Signin.html"><span><i class="fa fa-user-o fam" style="font-size:25px"></i></span></a>
+                    <span><i class="fa fa-shopping-bag fam" style="font-size:25px" type="button" class="btn" id="openModal"></i></span>
+                </div>
+            </div>
+            <hr size="10"class="hrv"> 
+                     
+        </nav>
+        <nav class="navmy d-lg-none d-block ">
+                    <div class="logo d-flex justify-content-around">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="combinedDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-navicon fam" style="font-size: 30px;"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="combinedDropdown">
+                                <h6 class="dropdown-header">CORE COLLECTION</h6>
+                                <a class="dropdown-item" href="#">· All collections</a>
+                                <a class="dropdown-item" onclick="addto('Hoodies')"> Hoodies>Hoodies</a>
+                                <a class="dropdown-item" onclick="addto('Sweatshirts')">Sweat-shirts</a>
+                                <a class="dropdown-item" onclick="addto('Jackets')">Jackets</a>
+                                <a class="dropdown-item" onclick="addto('Bottoms')">Bottoms</a>
+                                <div class="dropdown-divider"></div>
+                                <h6 class="dropdown-header">SHOP</h6>
+                                <a class="dropdown-item"onclick="addto('Mens')">Men's</a>
+                                <a class="dropdown-item" onclick="addto('Womens')">Women's</a>
+                                <a class="dropdown-item" href="prod.html">All</a>
+                                <div class="dropdown-divider"></div>
+                                <h6 class="dropdown-header">ABOUT GRACIOUS</h6>
+                                <a class="dropdown-item" href="about.html">Our story</a>
+                                <a class="dropdown-item" href="contact.html">Contact us</a>
+                               
+                            </div>
+                        </div>
+                   
+                    <img src="images/3.png" alt="" height="80px" width="auto" class="log-img2">
+                    <img src="images/4.png" alt="" height="80px" width="auto" class="log-img1">
+                        <div class="d-flex gap-4">
+                            <a href="Signin.html"><span><i class="fa fa-user-o fam" style="font-size:20px"></i></span></a>
+                            <span><i class="fa fa-shopping-bag fam" style="font-size:25px" type="button" class="btn" id="openModal"></i></span>
+                        </div>
+                </div>
+            </div>
+            <hr size="6" class="hrv">
+        </nav>
+        
+        <div class="heroabout container-fluid">
+           
+        </div>
+        <section class="modalsearch">
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" data-bs-backdrop="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center align-items-center">
+                            <input type="text" class="form-control" placeholder="Type your search here..." autofocus>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </header>
+    <main>
+    <div class="btn">
+        <div>
+<button onclick="showSection('section1')">About Grasious</button>
+<button onclick="showSection('section2')">Our Leadership</button>
+<button onclick="showSection('section3')">Fact and Figures</button></div>                
+</div>
+    <div id="section3" class="section">
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="text col-6">
+                <h1>Approx. 35M</h1>
+                <p>registered users</p>
+
+            </div>
+            <div class="col-6 mimg">
+                <img src="images/about us images/facts-global.webp" alt="" >
+            </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="col-6 mimg">
+                <img src="images/about us images/our-story.webp" alt="">
+            </div>
+            <div class="text col-6">
+                <h1>34M+</h1>
+                <p>items are available for sale on Gracious</p>
+            </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="row">
+            <div class="text col-6">
+                <h1>Up to 180,000</h1>
+                <p>new listings every day</p>
+            </div>
+            <div class="col-6 mimg">
+                <img src="images/about us images/facts-items.webp" alt="" >
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mimg">
+                <img src="images/about us images/facts-listings.webp" alt="" >
+            </div>
+            <div class="text col-6">
+                <h1>$3.5 Billion</h1>
+                <p>made by the Depop community to date</p>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="text col-6">
+                <h1>Vintage, streetwear, one-of-a-kind, Y2K</h1>
+                <p>are the biggest styles on Depop</p>
+            </div>
+            <div class="col-6 mimg">
+                <img src="images/about us images/facts-sellers.webp" alt="" >
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="section1" class="section">
+        <div class="container ">
+            <!-- Row 1 -->
+            <div class="row">
+                
+                
+                <div class="text col-6">
+                    <h2>Company's Journey</h2>
+                    <p>At Gracious Garments, our journey began with a simple yet powerful mission: <em>"To make online shopping easy and accessible for everyone!"</em> What started as a small venture with a handful of products has blossomed into a thriving e-commerce platform, thanks to the unwavering support of our loyal customers.</p>
+                </div>
+                <div class="col-6 mimg"><img src="images/about us images/our-story.webp" alt=""></div>   
+            </div>
+        
+            <!-- Row 2 -->
+            <div class="row" >
+                <div class="col-6 mimg"><img src="images/about us images/our-mission.webp" alt=""></div>
+                
+                <div class="text col-6">
+                    <h2>Purpose and Goals</h2>
+                    <p>Our purpose is clear: to offer a seamless shopping experience that caters to the diverse needs of our customers. We aim to provide high-quality, stylish clothing that empowers individuals to express themselves confidently.</p>
+                </div>
+            </div>
+        
+            <!-- Row 3 -->
+             <div class="row">
+                       
+               
+                <div class="text col-6">
+                    <h2>Introduction to the Team</h2>
+                    <p>Behind Gracious Garments is a passionate team of fashion enthusiasts, dedicated professionals, and customer service experts. Each member brings unique skills and insights to ensure we meet and exceed your expectations.</p>
+                </div>
+                <div class="col-6 mimg"><img src="images/about us images/our-community.webp" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div id="section2" class="section">
+        <div class="container-fluid">
+            <div class="row">
+            <!-- Card 1 -->
+            <div class="card col-6">
+                <img src="images/sss.jpg" alt="Card Image">
+                <div class="card-body">
+                    <h3>Areeb javed</h3>
+                    <p>Founder of Gracious garments</p>
+                    
+                </div>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="card col-6">
+                <img src="images/hh.jpg" alt="Card Image">
+                <div class="card-body">
+                    <h3>Farzam Ahmed</h3>
+                    <p>Co founder of Gracious garments</p>
+                    
+                </div>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="card col-6">
+                <img src="images/WhatsApp Image 2025-01-06 at 14.19.49_591bf161.jpg" alt="Card Image">
+                <div class="card-body">
+                    <h3>shohaib Akhter</h3>
+                    <p>CEO of Gracious Garments</p>
+                   
+                </div>
+            </div>
+        
+            <!-- Card 4 -->
+            <div class="card col-6">
+                <img src="images/WhatsApp Image 2025-01-06 at 16.10.31_d8173b48.jpg" alt="Card Image">
+                <div class="card-body">
+                    <h3>Taha Ali</h3>
+                    <p>deighner of Gracious garments</p>
+                   
+                </div>
+            </div>
+        
+            <!-- Card 5 -->
+            <div class="card col-6">
+                <img src="images/about us images/rafe-colburn (1).webp" alt="Card Image">
+                <div class="card-body">
+                    <h3>hamza </h3>
+                    <p>desighner</p>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</main>
+<footer class=" foot text-white py-4">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-4 col-sm-3">
+                <h5>About Us</h5>
+                <p>If you want to look as smexy as we do! follow  <span><a href="https://www.instagram.com/graciousgarments8/" class="text-decoration-none">us</a ></span> and grab it before it sells out! You'll be looking all aesthetic, just like everyone else who's got it together. Seriously, don't wait—get in on the trend now, and you'll be turning heads before you know it! 😏</p>
+            </div>
+            <div class="col-lg-4 col-sm-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="prod.html" class="text-white text-decoration-none">core collection</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-sm-3">
+                <h5>Contact Us</h5>
+                <p>Email: Arib.rico2008@gmail.com</p>
+                <p>Phone: +319 2999 820</p>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-6 map d-none d-sm-block">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20462.972353259007!2d67.08839694366466!3d24.95329752596035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3390008cfd9ab%3A0x50570e200b0de0fe!2sAptech%20scheme%2033!5e0!3m2!1sen!2s!4v1734410791904!5m2!1sen!2s"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="newsletter">
+                            <h2>Subscribe to Our Newsletter</h2>
+                            <p>Stay updated with our latest news and offers. Enter your email below:</p>
+                            <form id="newsletterForm">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+                                    <button class="btn btn-primary  " type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                            <div id="successMessage" class="alert  d-none" role="alert">
+                                Thank you for subscribing!
+                            </div>
+                        </div>
+                        </div>
+            </div>
+        
+        <hr class="bg-white">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function addto(cat) {
+        
+        window.location.href = "prod.html";
+        localStorage.setItem("category", cat);
+       }
+
+</script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+    
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+        
+        
+    </script>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
